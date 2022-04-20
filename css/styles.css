@@ -1,0 +1,92 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+  /* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+    
+.clear {
+    clear: both;
+
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", Helvetica,sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.calculator {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    /* /* height: 500px; */
+    background-color: black;
+    
+    width: 400px;
+    /* margin: 0 auto; */
+    padding:70px 40px 40px 40px;
+    /* padding: 7rem 4rem 4rem 4rem; */
+    border-radius: 25px;
+}
+
+.calc-screen {
+    width: 100%;
+    font-size: 5rem;
+    border: none;
+    height: 80px;
+    background-color: white;
+    color: black;
+    text-align: right;
+    padding: 0 10px 0 0;
+    
+}
+
+.calc-buttons {
+    display: flex;
+    flex-flow:row wrap; 
+    
+    padding: 15px 0 5px 0;
+}
+
+button {
+    height: 60px;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+    margin: 7px;
+    padding: 5px;
+    flex: 1 0 20%;
+    transition: all .4s ease-in-out;
+}
+
+.allClear {
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(242,49,49,1) 0%, rgba(40,0,255,1) 100%);
+}
+
+button:hover {
+    background-color: rgba(255, 7, 7, 0.753);
+    transform: scale(1.09);
+}
